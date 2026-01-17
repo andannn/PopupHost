@@ -2,7 +2,7 @@
  * Copyright 2025, the AniflowKMP project contributors
  * SPDX-License-Identifier: Apache-2.0
  */
-package me.andannn.navresult.sample.navigation.compose
+package me.andannn.navresult.sample.popup.host
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App()
+            SampleApp()
         }
     }
 }

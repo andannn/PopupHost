@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.compose)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.maven.publish)
 }
@@ -34,14 +33,14 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
+            implementation(libs.jetbrains.compose.runtime)
+            implementation(libs.jetbrains.compose.ui)
         }
     }
 }
 
 android {
-    namespace = "io.github.andannn"
+    namespace = "io.github.andannn.popup"
     compileSdk = 36
 
     defaultConfig {

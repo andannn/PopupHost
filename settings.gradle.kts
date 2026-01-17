@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NavResult"
+rootProject.name = "PopupHost"
 
 include(":popuphost")
-//include(":sample:navigation-compose")
+include(":sample:popup-host-compose")
