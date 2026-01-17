@@ -21,6 +21,16 @@ kotlin {
         }
     }
 
+    jvm {
+        compilations.all {
+            compileTaskProvider.configure {
+                compilerOptions {
+                    jvmTarget.set(JvmTarget.JVM_11)
+                }
+            }
+        }
+    }
+
     listOf(
         iosArm64(),
         iosSimulatorArm64()
