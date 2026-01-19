@@ -1,5 +1,7 @@
 A simple suspending API to show popups such as dialogs and bottom sheets.
 
+**Important: Popups shown using this library are not restored after process death.**
+
 ### Install
 
 libs.versions.toml
