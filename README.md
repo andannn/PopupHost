@@ -1,4 +1,4 @@
-A small helper for build retained model similar to android ViewModel.
+A simple suspending API to show popups such as dialogs and bottom sheets.
 
 ### Install
 
