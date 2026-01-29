@@ -4,7 +4,7 @@ kotlin = "2.2.20"
 compose = "1.9.0"
 mavenPublish = "0.34.0"
 activityKtx = "1.12.2"
-androidxActivity = "1.12.2"
+androidxActivity = "1.12.3"
 
 [libraries]
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
