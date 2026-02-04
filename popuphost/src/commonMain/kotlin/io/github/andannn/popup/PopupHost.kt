@@ -5,6 +5,7 @@
 package io.github.andannn.popup
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -71,6 +72,10 @@ class PopupHostState {
 
     internal var currentDialog by mutableStateOf<DialogData?>(null)
         private set
+
+    val currentPopup by derivedStateOf {
+        currentDialog?.popupId
+    }
 
     @Suppress("UNCHECKED_CAST")
     suspend fun <T> showDialog(popupId: PopupId<T>): T? = this@PopupHostState.showDialog(popupId) as T?

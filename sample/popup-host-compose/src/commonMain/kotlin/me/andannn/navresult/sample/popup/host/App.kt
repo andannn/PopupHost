@@ -36,11 +36,12 @@ import kotlinx.coroutines.launch
 fun SampleApp() {
     val popupHostState = remember { PopupHostState() }
     val scope = rememberCoroutineScope()
+    val currentPopup = popupHostState.currentPopup
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Sample") },
+                title = { Text(text = "Sample. current $currentPopup") },
             )
         }
     ) { innerPadding ->
@@ -220,10 +221,10 @@ fun DialogAContent(dialogA: DialogA, onAction: (Long) -> Unit) {
     }
 }
 
-object DialogA : PopupId<Long>
-object CustomBottomSheetA : PopupId<Long>
+data object DialogA : PopupId<Long>
+data object CustomBottomSheetA : PopupId<Long>
 
-class DialogWitParam(
+data class DialogWitParam(
     val param: String
 ) : PopupId<DialogWitParam.Result> {
     sealed interface Result {
