@@ -23,3 +23,4 @@ rootProject.name = "PopupHost"
 
 include(":popuphost")
 include(":sample:popup-host-compose")
+include(":sample:androidApp")
